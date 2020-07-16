@@ -1,0 +1,193 @@
+<div class="container animated fadeIn">
+
+  <h1><b>React Form</b></h1>
+  <hr>
+
+  <p>
+    <a href="https://angular.tw/guide/reactive-forms" target="_blank"><u>Angular官方文檔</u></a>&nbsp;&nbsp;
+    <a href="https://blog.thoughtram.io/angular/2016/03/14/custom-validators-in-angular-2.html" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;
+    <a href="https://pvt5r486.github.io/f2e/20190618/1504140932/" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
+    <a href="https://www.pluralsight.com/guides/building-custom-validators-in-angular" target="_blank"><u>參考資料3</u></a>
+  </p>
+
+  <h3>1. Import Module</h3>
+  <div class="monokai-bg default margin-bot">
+    <code>
+      <span class="monokai-red">import</span>{{ ' { ' }}
+      <span class="monokai-blue"> FormGroup, FormBuilder, Validators, ValidatorFn, AbstractControl </span>{{ '}' }}
+      <span class="monokai-red"> from </span>
+      <span class="monokai-orange"> '@angular/forms'</span>;
+    </code>
+  </div>
+
+  <h3>2. 在 <span class="monokai-red">ts</span> 檔中，用
+    <b>FormBuilder</b> 建立 <b>FormGroup</b>
+  </h3>
+  <p><span class="monokai-darkBlue"><b>ctrl</b></span> 的類別是 <span class="monokai-darkGreen"><b>AbstractControl </b></span>
+    ，格式為 [ <span class="monokai-orange"><b>'初始值' </b></span>, [ <span class="monokai-darkGreen"><b>驗證1 </b></span>,
+    <span class="monokai-darkGreen"><b>驗證2 </b></span> , ... ] ]。
+  </p>
+  <p><span class="monokai-darkGreen"><b>AbstractControl </b></span> 是 所有三種表單控制元件類別（FormControl、FormGroup 和 FormArray）的抽象基底類別。它提供了一些公共的行為和屬性。</p>
+  <p><span class="monokai-darkGreen"><b>Validators </b></span> 是 驗證器。內建的所有驗證參考<a href="https://angular.tw/api/forms/Validators" target="_blank"><u>這裡</u></a>。</p>
+  <div class="monokai-bg default margin-bot">
+    <code>
+      <span class="monokai-blue">fg</span><span class="monokai-fg">: </span>
+      <span class="monokai-green">FormGroup</span>;<br><br>
+      <span class="monokai-darkBlue">constructor</span>(<span class="monokai-darkBlue">private </span>
+      <span class="monokai-blue">fb</span>: <span class="monokai-green">FormBuilder</span>) {{ '{}' }}<br><br>
+      <span class="monokai-yellow">ngOnInit</span>(): <span class="monokai-green">void</span> {{ '{' }}<br>
+      <span class="tab monokai-darkBlue">this</span>.<span class="monokai-blue">fb</span> =
+      <span class="monokai-darkBlue">this</span>.<span class="monokai-blue">fg</span>.<span class="monokai-yellow">group</span>{{ '({'}}<br>
+      <span class="tab"></span><span class="tab monokai-blue">ctrl_1: </span>[
+      <span class="monokai-orange">{{"''"}}</span>,
+      <span class="monokai-green">Validators</span>.<span class="monokai-yellow">required</span>],<br>
+      <span class="tab"></span><span class="tab monokai-blue">ctrl_2: </span>[
+      <span class="monokai-orange">{{"'init value'"}}</span>, [
+      <span class="monokai-green">Validators</span>.<span class="monokai-yellow">required</span>,
+      <span class="monokai-green">Validators</span>.<span class="monokai-yellow">minLength</span>(3) ]],<br>
+      <span class="tab"></span> {{ '});' }}<br>{{ '}' }}<br><br>
+      <span class="monokai-darkBlue">get </span><span class="monokai-blue">ctrl_1</span>() {{ '{' }}
+      <span class="monokai-red">return </span><span class="monokai-darkBlue">this</span>.<span class="monokai-blue">fg</span>.<span class="monokai-yellow">get</span>(
+      <span class="monokai-orange">'ctrl_1' </span>); {{ '}' }}
+    </code>
+  </div>
+
+  <h3>3. <span class="monokai-red">html</span> 中的資料綁定</h3>
+  <p>將 <span class="monokai-red"><b>form</b></span> 中 的 <span class="monokai-orange"><b> formGroup </b></span> 和
+    <span class="monokai-red"><b> ts </b></span> 中的
+    <span class="monokai-darkBlue"><b> fg </b></span> 綁定。</p>
+  <p>再將 <span class="monokai-red"><b>input</b></span> 中 的 <span class="monokai-orange"><b> formControlName </b></span> 和
+  <span class="monokai-darkBlue"><b> fg </b></span> 中的
+  <span class="monokai-darkBlue"><b> ctrl </b></span> 綁定。</p>
+  <div class="margin-bot">
+    <iframe width="100%" height="280" src="//jsfiddle.net/bearAndrew/jadqz2cm/15/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+  </div>
+
+  <h3>4. 加入驗證器</h3>
+  <p><span class="monokai-darkGreen"><b>AbstractControl </b></span>中用來判斷的屬性。</p>
+  <p>ctrl_1.errors<span class="text-danger"><b>?</b></span>.required 中，errors 後方需使用 <span class="text-danger"><b>?</b></span> 運算子，因為 errors 可能為 null 。</p>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">狀態</th>
+        <th scope="col">為真時的類別</th>
+        <th scope="col">為假時的類別</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">控制元件被訪問過</th>
+        <td>touched</td>
+        <td>untouched</td>
+      </tr>
+      <tr>
+        <th scope="row">控制元件的值變化了</th>
+        <td>dirty</td>
+        <td>pristine</td>
+      </tr>
+      <tr>
+        <th scope="row">控制元件的值有效</th>
+        <td>valid</td>
+        <td>invalid</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <iframe width="100%" height="300" src="//jsfiddle.net/bearAndrew/jadqz2cm/22/embedded/html,css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+  </p>
+
+  <div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title"><b>表單範例</b></h4>
+
+      <div class="row">
+        <p class="col-sm-3"><b>Error :</b> <span [ngClass]="ctrl_1.errors ? 'text-danger' : '' "> {{ctrl_1.errors|json}}</span></p>
+        <p class="col-sm-3"><b>Touched :</b> <span [ngClass]="ctrl_1.touched ? 'text-success' : 'text-danger'"> {{ctrl_1.touched|json}}</span></p>
+        <p class="col-sm-3"><b>Dirty :</b> <span [ngClass]="ctrl_1.dirty ? 'text-success' : 'text-danger'"> {{ctrl_1.dirty|json}}</span></p>
+        <p class="col-sm-3"><b>Valid :</b> <span [ngClass]="ctrl_1.valid ? 'text-success' : 'text-danger'"> {{ctrl_1.valid|json}}</span></p>
+      </div>
+
+      <form [formGroup]="fg">
+        <div class="form-group">
+          <label for="ctrl_1">Control 1</label>
+          <input class="form-control" formControlName="ctrl_1" id="ctrl_1"
+          [ngClass]="{
+            'invalid': ctrl_1.errors && (ctrl_1.touched || ctrl_1.dirty),
+            'valid': ctrl_1.valid}">
+
+          <div *ngIf="ctrl_1.errors?.required && (ctrl_1.touched || ctrl_1.dirty)"
+          class="alert alert-danger">
+            Control 1 is required
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <h3>5. 自訂驗證器</h3>
+  <p><a href="https://angular.tw/guide/form-validation#defining-custom-validators"><u>詳細資訊</u></a></p>
+  <p>自訂一個禁用字串驗證，驗證後回傳一個<span class="monokai-darkGreen"><b> AbstractControl </b></span>。</p>
+  <p>
+    若輸入值與禁用值相同，回傳錯誤訊息
+    <b>
+      {{' { '}}<span class="monokai-darkBlue">forbiddenWord:</span>{{' { '}}<span class="monokai-darkBlue">value: </span>
+      <span class="monokai-darkBlue">control</span>.<span class="text-primary">value</span> {{'} }'}}
+    </b>，
+    反之則回傳<b><span class="text-primary"> null </span></b>。
+  </p>
+
+  <div class="monokai-bg default">
+    <code>
+      <span class="monokai-yellow">forbiddenWordValidator</span>(<span class="monokai-blue">wordRe</span>:
+      <span class="monokai-green">RegRxp</span>):<span class="monokai-green"> ValidatorFn</span> {{ '{' }}<br>
+      <span class="tab monokai-red">return</span> (<span class="monokai-blue">control </span>:
+      <span class="monokai-green">AbstractControl</span>{{ '): {[' }}<span class="monokai-blue">key</span>:
+      <span class="monokai-green">string</span>]: <span class="monokai-green">any</span> {{ '} |' }}
+      <span class="monokai-green">null</span><span class="monokai-darkBlue"> =&gt; </span> {{ '{' }}<br>
+      <span class="tab"></span><span class="tab monokai-darkBlue">const</span><span class="monokai-blue"> forbidden </span>=
+      <span class="monokai-blue">wordRe</span>.<span class="monokai-yellow">test</span>(<!--
+      --><span class="monokai-blue">contorl</span>.<span class="monokai-darkBlue">value</span>);<br>
+      <span class="tab"></span><span class="tab monokai-red">return </span><span class="monokai-darkBlue">forbidden</span>{{' ? {'}}
+      <span class="monokai-blue">forbiddenWord:</span>{{' { '}}<span class="monokai-blue">value: </span>
+      <span class="monokai-blue">control</span>.<span class="monokai-darkBlue">value</span> {{'} } :'}}
+      <span class="monokai-darkBlue">null</span>;<br>
+      <span class="tab"></span> {{ '};' }}<br>{{ '}' }}
+    </code>
+  </div>
+
+  <div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title"><b>自訂驗證範例</b></h4>
+
+      <p><b>Error :</b> <span [ngClass]="ctrl_2.errors ? 'text-danger' : '' "> {{ctrl_2.errors|json}}</span></p>
+
+      <form [formGroup]="fg">
+        <div class="form-group">
+          <label for="ctrl_2">Control 2  ( 限制: 禁止使用"admin"，至少輸入3個字元 )</label>
+          <input class="form-control" formControlName="ctrl_2" id="ctrl_2"
+          [ngClass]="{
+            'invalid': ctrl_2.errors && (ctrl_2.touched || ctrl_2.dirty),
+            'valid': ctrl_2.valid}">
+
+          <div *ngIf="ctrl_2.errors?.required && (ctrl_2.touched || ctrl_2.dirty)"
+          class="alert alert-danger">
+            Control 2 is required
+          </div>
+
+          <div *ngIf="ctrl_2.errors?.minlength && (ctrl_2.touched || ctrl_2.dirty)"
+          class="alert alert-danger">
+            Control 2 must be greater than 3 character
+          </div>
+
+          <div *ngIf="ctrl_2.errors?.forbiddenWord && (ctrl_2.touched || ctrl_2.dirty)"
+          class="alert alert-danger">
+            Control 2 can not be "{{ctrl_2.errors?.forbiddenWord.value}}"
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

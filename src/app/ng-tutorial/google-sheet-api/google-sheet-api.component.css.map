@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "google-sheet-api.component.scss"
+    ],
+    "names": [],
+    "file": "google-sheet-api.component.css"
+}

@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+.delay-01s {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-02s {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-03s {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-04s {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-05s {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-06s {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-07s {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-08s {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.delay-09s {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+h5 {
+  margin-bottom: 1rem;
+}
+
+h6 {
+  margin-bottom: 1rem;
+}
+
+[class^="container"] {
+  margin-top: 1rem;
+}
+
+pre {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  padding-top: 65px;
+}
+
+.tab {
+  padding-left: 2rem;
+}
+
+div.default {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.margin-bot {
+  margin-bottom: 3rem !important;
+}
+
+.card {
+  margin-bottom: 3rem;
+}
+
+.bash-bg {
+  background-color: #F2F3F4;
+}
+
+.page-wrapper.toggled .sidebar {
+  left: -300px;
+}
+/*# sourceMappingURL=styles.css.map */

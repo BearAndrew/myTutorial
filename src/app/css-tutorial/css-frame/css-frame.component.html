@@ -1,0 +1,77 @@
+<div class="container animated fadeIn">
+  <h1><b>Css-frame</b></h1>
+  <hr>
+
+  <h3><b>MDbootstrap</b></h3>
+  <a href="https://mdbootstrap.com/" target="_blank">MDbootstrap 官網</a>
+  <hr>
+
+  <h3>Quick Start</h3>
+
+  <!-- mdb-cli -->
+  <div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title"><b>MDB Cli install</b></h4>
+      <p><a href="https://mdbootstrap.com/cli/quick-start/" target="_blank">詳細資訊</a></p>
+      <p>1. 安裝 mdb-cli</p>
+      <pre class="bash-bg">npm install -g mdb-cli</pre>
+      <p>2. 登入 mdb</p>
+      <pre class="bash-bg">mdb login</pre>
+      <p>3. 創建新專案</p>
+      <pre class="bash-bg">mdb init</pre>
+    </div>
+  </div>
+  <!-- mdb-cli -->
+
+
+  <!-- npm -->
+  <div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title"><b>NPM install</b></h4>
+      <p><a href="https://mdbootstrap.com/docs/angular/getting-started/quick-start/" target="_blank">詳細資訊</a></p>
+      <p>1. 用angular-cli 創建新專案</p>
+      <pre class="bash-bg">ng new your-angular-project</pre>
+      <p>2. npm 安裝以下檔案</p>
+      <pre class="bash-bg">npm install --save angular-bootstrap-md chart.js@2.5.0 @types/chart.js @fortawesome/fontawesome-free hammerjs animate.css</pre>
+      <p>3. 更新 <span class="monokai-red">app.module.ts</span> </p>
+      <div class="monokai-bg default">
+        <code>
+          <span class="monokai-red">import </span>
+          {{ '{' }}<span class="monokai-blue"> NgModule </span>{{ '}' }}
+          <span class="monokai-red"> from </span> <span class="monokai-orange">'@angular/core';</span>
+          <br>
+          <span class="monokai-red">import </span>
+          {{ '{' }}<span class="monokai-blue"> MDBBootstrapModule </span>{{ '}' }}
+          <span class="monokai-red"> from </span> <span class="monokai-orange">'angular-bootstrap-md';</span>
+          <br><br>
+          @<span class="monokai-green">NgModule</span> {{ '({' }}<br>
+          <span class="tab monokai-blue">imports: </span> <span class="monokai-fg"> {{ '[' }}</span><br>
+          <span class="tab"></span><span class="tab monokai-green">MDBBootstrapModule.</span>
+          <span class="monokai-yellow">forRoot</span>();<br>
+          <span class="tab">]</span><br>{{ '});' }}
+        </code>
+      </div>
+      <p>4. 更新 <span class="monokai-red">angular.json</span> 中的 <span class="monokai-red">styles</span> 和 <span class="monokai-red">scripts</span></p>
+      <div class="monokai-bg default">
+        <code>
+          <span class="monokai-blue">{{ '"styles"' }}</span><span class="monokai-fg"> : [</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/@fortawesome/fontawesome-free/scss/solid.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/@fortawesome/fontawesome-free/scss/regular.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/@fortawesome/fontawesome-free/scss/brands.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/angular-bootstrap-md/assets/scss/mdb.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/animate.css/animate.css"' }}</span><br>
+          <span class="tab monokai-orange">{{ '"src/styles.scss"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="monokai-fg">],</span><br>
+          <span class="monokai-blue">{{ '"scripts"' }}</span><span class="monokai-fg"> : [</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/chart.js/dist/Chart.js"' }}</span><span class="monokai-fg">,</span><br>
+          <span class="tab monokai-orange">{{ '"node_modules/hammerjs/hammer.min.js"' }}</span><br>
+          <span class="monokai-fg">],</span>
+        </code>
+      </div>
+    </div>
+  </div>
+  <!-- npm -->
+
+</div>

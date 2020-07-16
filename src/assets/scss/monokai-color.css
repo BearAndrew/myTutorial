@@ -1,0 +1,52 @@
+code {
+  color: #F8F8F2;
+}
+
+.monokai-bg {
+  background-color: #272822;
+}
+
+.monokai-fg {
+  color: #F8F8F2;
+}
+
+.monokai-comment {
+  color: #75715E;
+}
+
+.monokai-red {
+  color: #F92672;
+}
+
+.monokai-orange {
+  color: #FD971F;
+}
+
+.monokai-lightOrange {
+  color: #E69F66;
+}
+
+.monokai-yellow {
+  color: #E6DB74;
+}
+
+.monokai-green {
+  color: #A6E22E;
+}
+
+.monokai-darkGreen {
+  color: #6da800;
+}
+
+.monokai-blue {
+  color: #66D9EF;
+}
+
+.monokai-darkBlue {
+  color: #4da0ff;
+}
+
+.monokai-purple {
+  color: #AE81FF;
+}
+/*# sourceMappingURL=monokai-color.css.map */

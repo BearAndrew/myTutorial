@@ -1,0 +1,84 @@
+<div class="container">
+
+  <h1>React Form</h1>
+
+  <form #myform="ngForm" [formGroup]="fg">
+    <p>Form Group Value : {{fg.value|json}}</p>
+    <p>Form Group Status : {{fg.status|json}}</p>
+    <p>Form Group Valid : {{fg.valid|json}}</p>
+    <p>Name Error : {{name.errors|json}}</p>
+    <p>Account Error : {{account.errors|json}}</p>
+    <p>Nickname Error : {{nickName.errors|json}}</p>
+
+    <!-- <p>Name Touched: {{name.touched}}</p>
+    <p>Name Valid: {{name.valid}}</p>
+    <p>Name Dirty: {{name.dirty}}</p> -->
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" placeholder="Enter name" formControlName="name" id="name"
+      [ngClass]="{
+        'invalid': name.errors && (name.touched || name.dirty),
+        'valid': name.valid}">
+
+      <div *ngIf="name.errors && (name.touched || name.dirty)" class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="account">Account</label>
+      <input class="form-control" placeholder="Enter account" formControlName="account" id="account"
+      [ngClass]="{
+        'invalid': account.errors && (account.touched || account.dirty),
+        'valid': account.valid}">
+
+      <div *ngIf="account.errors?.required && (account.touched || account.dirty)" class="alert alert-danger">
+        Account is required
+      </div>
+
+      <div *ngIf="(account.errors?.minlength || account.errors?.maxlength) && (account.touched || account.dirty)" class="alert alert-danger">
+        Account must be greater than 3 and less than 10 character
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="account">Nickname</label>
+      <input class="form-control" placeholder="Enter nickname" formControlName="nickName" id="nickName"
+      [ngClass]="{
+        'invalid': nickName.errors && (nickName.touched || nickName.dirty),
+        'valid': nickName.valid}">
+
+      <div *ngIf="nickName.errors?.required && (nickName.touched || nickName.dirty)" class="alert alert-danger">
+        Nickname is required
+      </div>
+
+      <div *ngIf="(nickName.errors?.forbiddenName) && (nickName.touched || nickName.dirty)" class="alert alert-danger">
+        Nickname can not be "{{nickName.errors?.forbiddenName.value}}"
+      </div>
+    </div>
+
+
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <div class="form-group">
+      <label for="radio">Show NickName:</label>
+      <div>
+        <input id="male" type="radio" value="true" name="radio" formControlName="radio" (click)="toggle(true)">
+        <label for="male">Yes</label>
+      </div>
+      <div>
+        <input id="female" type="radio" value="false" name="radio" formControlName="radio" (click)="toggle(false)">
+        <label for="female">No</label>
+     </div>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!fg.valid">Submit</button>
+  </form>
+  <!-- <button class="btn btn-primary" (click)="toggle()">toggle</button> -->
+</div>

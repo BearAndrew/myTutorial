@@ -1,0 +1,75 @@
+<!-- google sheets api gas version -->
+<div class="container animated fadeIn">
+  <h1><b>Google Sheet API</b></h1>
+  <hr>
+
+  <p>
+    <a href="https://iandays.com/2018/02/08/googleformapi/index.html" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://www.wfublog.com/2017/01/google-apps-script-spreadsheet-write-data.html" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://contemplator.github.io/blog/2017/10/01/angular-%E4%BD%BF%E7%94%A8-google-%E8%A9%A6%E7%AE%97%E8%A1%A8%E7%95%B6%E8%B3%87%E6%96%99%E5%BA%AB/" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://spin.atomicobject.com/2016/10/03/prototyping-angularjs-google-sheets/" target="_blank"><u>參考資料2</u></a>
+  </p>
+
+  <h4><b>1.創建 Google App Script</b></h4>
+  <p><a href="https://docs.google.com/spreadsheets/d/1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM" target="_blank"><u>Google 表單位置</u></a></p>
+  <p>在 Google Sheet 中，點選上方 <span class="monokai-red">工具</span>
+    然後點選 <span class="monokai-red">&lt; &gt; 指令碼編輯器</span>
+  </p>
+  <div class="margin-bot">
+    <img class="img-fluid" src="../../../assets/img/google-sheet-api/google-sheet-api-img1.png"
+    alt="google-sheet-api-img1">
+  </div>
+
+  <h4><b>2. 在 Google App Script ( GAS ) 中打程式碼</b></h4>
+  <p><a href="https://script.google.com/d/1HvYZJaQldO8dZKfEo-J-6dVBi3IdZOcFlo7cRFKGUp-aaGhMp7kvHXQG/edit?mid=ACjPJvGXz8OupxB-XGL-BNNePPiGwia5o7ygVbmKAB3Msif3jbH9xq437HyWcbeT5RBfoxZqoOZ9oi735S6DBO9XpyZLAeBPyZnz7AqJM4_5_gWwnVmYMBqY2AwAdfHkNXRmnO3WpA9PgO8&uiv=2" target="_blank">
+    <u>GAS 位置</u></a></p>
+  <div class="margin-bot"><iframe width="100%" height="1330" src="//jsfiddle.net/bearAndrew/3ky0g8ve/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></div>
+
+  <h4><b>3. 部屬 GAS</b></h4>
+  <p>點選上方 <span class="monokai-red">發布</span>
+    然後點選 <span class="monokai-red">部屬為網頁應用程式...</span>
+  </p>
+  <p>跳出視窗後，點選<span class="monokai-red">發布</span>(第二次以後為<span class="monokai-red">更新</span>)</p>
+  <div class="margin-bot">
+    <p><img class="img-fluid" src="../../../assets/img/google-sheet-api/google-sheet-api-img2.png"
+      alt="google-sheet-api-img2"></p>
+    <p><img class="img-fluid" src="../../../assets/img/google-sheet-api/google-sheet-api-img3.png"
+      alt="google-sheet-api-img3">
+    </p>
+  </div>
+
+  <h4><b>4. 網頁端串接</b></h4>
+  <p>以 Http post 對 GAS 發出請求</p>
+  <p>安裝 jquery</p>
+  <pre class="bash-bg">npm i jquery</pre>
+  <p>更新 <span class="monokai-red">angular.json</span> 中的 <span class="monokai-red">scripts</span></p>
+  <div class="monokai-bg default">
+    <code>
+      <span class="monokai-blue">{{ '"scripts"' }}</span>: [<br>
+      <span class="tab monokai-orange">{{ '"node_modules/jquery/dist/jquery.min.js"' }}</span><br>],
+    </code>
+  </div>
+  <p>在 <span class="monokai-red"><b>ts</b></span> 檔中 import</p>
+  <div class="monokai-bg default">
+    <code>
+      <span class="monokai-red">import</span><span class="monokai-darkBlue"> * </span>
+      <span class="monokai-red">as </span> <span class="monokai-blue"> $ </span>
+      <span class="monokai-red">from </span> <span class="monokai-orange">{{" 'jquery' "}}</span>;
+    </code>
+  </div>
+  <p>在 <span class="monokai-orange"><b>ngOnInit</b></span>() 中打上以下程式碼</p>
+  <div class="margin-bot"><iframe width="100%" height="650" src="//jsfiddle.net/bearAndrew/4va3kcL1/1/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></div>
+
+  <div class="card shadow">
+    <div class="card-body">
+      <h5 class="card-title">範例</h5>
+      <hr>
+      <p>在 Google 表單中看讀寫內容   <a href="https://docs.google.com/spreadsheets/d/1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM"><u>Google 表單位置</u></a></p>
+      <p>按下寫入，若成功送出請求，出現對話框顯示 "OK"</p>
+      <p><button class="btn btn-primary" id="write">寫入</button></p>
+      <p>按下讀取，若成功送出請求，出現對話框顯示回傳內容</p>
+      <p><button class="btn btn-danger" id="read">讀取</button></p>
+    </div>
+  </div>
+</div>
+<!-- google sheets api gas version -->

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,WAAW,EAAE,iBAAiB;EAAE,WAAW;CAC5C;;AAED,AAAA,QAAQ,CAAE;EACR,WAAW,EAAE,iBAAiB;EAAE,SAAS;CAC1C",
+    "sources": [
+        "react-form.component.scss"
+    ],
+    "names": [],
+    "file": "react-form.component.css"
+}
