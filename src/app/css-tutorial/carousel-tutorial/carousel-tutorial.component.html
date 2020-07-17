@@ -1,0 +1,37 @@
+<div class="container animated fadeIn">
+  <h1><b>Carousel</b></h1>
+  <hr>
+
+  <h2><b>Slick</b></h2>
+  <p><a href="https://kenwheeler.github.io/slick" target="_blank"><u>Slick 官網</u></a></p>
+
+  <h4><b>1. 安裝</b></h4>
+  <pre class="bash-bg">npm i slick-carousel jquery -s</pre>
+  <p>在 <span class="monokai-red">angular.json</span> 中 import</p>
+  <div class="monokai-bg default">
+    <code>
+      <span class="monokai-blue">{{ '"styles"' }}</span><span class="monokai-fg"> : [</span><br>
+      <span class="tab monokai-orange">{{ '"node_modules/slick-carousel/slick/slick.scss"' }}</span><span class="monokai-fg">,</span><br>
+      <span class="tab monokai-orange">{{ '"node_modules/slick-carousel/slick/slick-theme.scss"' }}</span><span class="monokai-fg">,</span><br>
+      <span class="monokai-fg">],</span><br>
+      <span class="monokai-blue">{{ '"scripts"' }}</span><span class="monokai-fg"> : [</span><br>
+      <span class="tab monokai-orange">{{ '"node_modules/slick-carousel/slick/slick.min.js"' }}</span><span class="monokai-fg">,</span><br>
+      <span class="tab monokai-orange">{{ '"node_modules/jquery/dist/jquery.js"' }}</span><br>
+      <span class="monokai-fg">],</span>
+    </code>
+  </div>
+
+  <h4><b>2. 在 Angular 中打入程式碼</b></h4>
+  <p><iframe width="100%" height="400" src="//jsfiddle.net/bearAndrew/fu68c50e/2/embedded/js,html,css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+
+  <div class="card shadow margin-bot">
+    <div class="card-body">
+      <h4 class="card-title">範例</h4>
+      <div class='carousel'>
+        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg">
+        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg">
+        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg">
+      </div>
+    </div>
+  </div>
+</div>

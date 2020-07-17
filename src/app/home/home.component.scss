@@ -1,0 +1,32 @@
+$sm : 768 px;
+
+.wrap {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel {
+  text-align: center;
+  color: #419be0;
+  background: black;
+  img {
+    display: block;
+    max-height: 100vh;
+    width: auto;
+    opacity: 0.3;
+  }
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10vw;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}

@@ -3,10 +3,15 @@
 
   <!-- Navbar brand -->
   <mdb-navbar-brand>
-    <a class="navbar-brand nav-link waves-light" (click)="toggleSidebar()">
-      <span *ngIf="getSideBarState()" class="fa fa-chevron-circle-right text-white"></span>
-      <span *ngIf="!getSideBarState()" class="fa fa-chevron-circle-left text-white"></span>
-    </a>
+    <div *ngIf="router.url !== '/home'">
+      <a class="navbar-brand waves-light" (click)="toggleSidebar()">
+        <i *ngIf="getSideBarState()" class="fa fa-chevron-circle-right text-white"></i>
+        <i *ngIf="!getSideBarState()" class="fa fa-chevron-circle-left text-white"></i>
+      </a>
+    </div>
+    <div *ngIf="router.url === '/home'">
+      <i class="navbar-brand waves-light fa fa-home"></i>
+    </div>
   </mdb-navbar-brand>
 
   <!-- Collapsible content -->
@@ -44,8 +49,7 @@
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
           <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/css-tutorial/css-frame']">Css frame</a>
           <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/css-tutorial/sidebar-tutorial']">Sidebar tutorial</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/css-tutorial/carousel-tutorial']">Carousel tutorial</a>
           <div class="divider dropdown-divider"></div>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
         </div>

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+$sidebar-width: 260px;
 
 // animation delay 0.x second
 @for $i from 1 through 9 {
@@ -16,7 +17,14 @@
 }
 
 [class^="container"] {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 pre {
@@ -25,7 +33,7 @@ pre {
 }
 
 body {
-  padding-top: 65px;
+  padding-top: 55px;
 }
 
 .tab {
@@ -41,14 +49,11 @@ div.default {
   margin-bottom: 3rem !important;
 }
 
-.card {
-  margin-bottom: 3rem;
-}
-
 .bash-bg {
   background-color: #F2F3F4;
 }
 
+// sidebar
 .page-wrapper.toggled .sidebar {
-  left: -300px;
+  left: -$sidebar-width;
 }

@@ -3,11 +3,11 @@ import * as $ from 'jquery';
 import 'slick-carousel';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-carousel-tutorial',
+  templateUrl: './carousel-tutorial.component.html',
+  styleUrls: ['./carousel-tutorial.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CarouselTutorialComponent implements OnInit {
 
   constructor() { }
 
@@ -15,14 +15,14 @@ export class HomeComponent implements OnInit {
     $(document).ready( () => {
       $('.carousel').slick({
         autoplay: true,
+        // centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // dots: true,
+        dots: true,
         infinite: true,
         cssEase: 'linear',
         speed: 1500,
         fade: true,
-        pauseOnHover: false,
       });
     });
   }

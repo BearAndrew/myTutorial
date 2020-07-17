@@ -2,7 +2,7 @@
 
 <div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
   <app-sidebar></app-sidebar>
-  <main class="page-content">
+  <main class="page-content not-overlap" [ngClass]="{notransition: isHome}">
     <router-outlet></router-outlet>
     <div class="overlay" (click)="toggleSidebar()" [ngClass]="{'show' : !getSideBarState()}"></div>
   </main>

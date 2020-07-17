@@ -1,15 +1,22 @@
+$sidebar-width: 260px;
+
+// sidebar will not overlap the page
+.not-overlap {
+  // greater than sm screen width
+  @media screen and (min-width: 768px) {
+    padding-left: $sidebar-width;
+  }
+}
 .page-wrapper {
-  height: 100vh;
+  // height: 100vh;
+  padding: 0;
+  // border: blue 5px solid;
 
   .page-content {
-    display: inline-block;
+    // display: inline-block;
     width: 100%;
-    padding-top: 20px;
     transition: padding-left .3s ease;
-
-    @media screen and (min-width: 768px) {
-      padding-left: 300px;
-    }
+    // border: red 5px solid;
 
     .overlay {
       position: fixed;

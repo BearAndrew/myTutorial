@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SidebarService {
-  toggled = false;
+  toggled = true;
+  // tslint:disable-next-line: variable-name
   _hasBackgroundImage = true;
   menus = [
     {

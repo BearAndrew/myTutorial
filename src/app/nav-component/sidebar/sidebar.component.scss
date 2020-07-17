@@ -264,7 +264,7 @@ $top-nav-offset: 56px; // top-navbar offset
 
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: $top-nav-offset;
     display: flex;
 
     >div {

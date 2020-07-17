@@ -20,6 +20,7 @@ import { SidebarRightComponent } from './nav-component/sidebar-right/sidebar-rig
 import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sidebar-tutorial.component';
 import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-sheet-api.component';
 import { TestComponent } from './test/test.component';
+import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/carousel-tutorial.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TestComponent } from './test/test.component';
     SidebarRightComponent,
     SidebarTutorialComponent,
     GoogleSheetApiComponent,
-    TestComponent
+    TestComponent,
+    CarouselTutorialComponent
   ],
   imports: [
     BrowserModule,
