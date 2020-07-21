@@ -1,27 +1,30 @@
-# AngularFreeDemo
+# My Tutorial  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+## 我的學習紀錄  
 
-## Development server
+網頁位置 https://bearandrew.github.io/myTutorial/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 已完成  
 
-## Code scaffolding
+## Angular / js
+react form : angular react from  
+google sheets api  
+chart: chartjs  
+deployment: iis , github page  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Css
+css-frame: mdbootstrap  
+sidbar-tutorial: pro-sidebar  
+carousel: slick  
 
-## Build
+### 待完成  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Angular / js
+social login  
+google map  
+unit test  
+e2e test  
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Css
+deployment: aws, gcp, azure  
