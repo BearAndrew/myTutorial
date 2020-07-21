@@ -1,0 +1,17 @@
+.btn-sticky-circle {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  height: 8vh;
+  width: 8vh;
+  border: 3px solid black;
+  border-radius: 50%;
+  background: none;
+  color: black;
+  outline:none;
+
+  &:hover {
+    border: 3px solid gray;
+    color: gray;
+  }
+}

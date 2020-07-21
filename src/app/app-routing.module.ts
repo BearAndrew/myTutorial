@@ -9,6 +9,8 @@ import { CssTutorialComponent } from './css-tutorial/css-tutorial.component';
 import { ValidatorComponent } from './ng-tutorial/validator/validator.component';
 import { ReactFormComponent } from './ng-tutorial/react-form/react-form.component';
 import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-sheet-api.component';
+import { ChartComponent } from './ng-tutorial/chart/chart.component';
+import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
 // css tutorial
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
 import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sidebar-tutorial.component';
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'ng-tutorial/validator', pathMatch: 'full', component: ValidatorComponent },
   { path: 'ng-tutorial/react-form', pathMatch: 'full', component: ReactFormComponent },
   { path: 'ng-tutorial/google-sheet-api', pathMatch: 'full', component: GoogleSheetApiComponent },
+  { path: 'ng-tutorial/chart', pathMatch: 'full', component: ChartComponent },
+  { path: 'ng-tutorial/deployment', pathMatch: 'full', component: DeploymentComponent },
   { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
   { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
   { path: 'css-tutorial/carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },

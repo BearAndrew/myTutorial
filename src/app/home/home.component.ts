@@ -27,4 +27,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
 }

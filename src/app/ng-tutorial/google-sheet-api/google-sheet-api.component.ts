@@ -50,7 +50,7 @@ export class GoogleSheetApiComponent implements OnInit {
           return this.initClient();
       },
       err => {
-          console.log('Gapi Failed: ' + err);
+          console.log('Gapi Failed: ' + JSON.stringify(err));
           this.gapiFailed = true;
           alert('Gapi load failed.');
       }
@@ -67,7 +67,7 @@ export class GoogleSheetApiComponent implements OnInit {
       console.log('Gapi Ready');
       this.gapiFailed = false;
     }, err => {
-        console.log('Gapi Failed: ' + err);
+        console.log('Gapi Failed: ' + JSON.stringify(err));
         this.gapiFailed = true;
         alert('Gapi initial failed.');
     });

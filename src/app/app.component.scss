@@ -7,6 +7,7 @@ $sidebar-width: 260px;
     padding-left: $sidebar-width;
   }
 }
+
 .page-wrapper {
   // height: 100vh;
   padding: 0;
@@ -17,6 +18,10 @@ $sidebar-width: 260px;
     width: 100%;
     transition: padding-left .3s ease;
     // border: red 5px solid;
+
+    .router-content {
+      min-height: calc(100vh - 55px - 265px);
+    }
 
     .overlay {
       position: fixed;

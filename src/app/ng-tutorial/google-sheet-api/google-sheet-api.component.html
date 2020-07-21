@@ -23,11 +23,11 @@
   <h4><b>2. 在 Google API Console 中建立新專案</b></h4>
   <p><a href="https://console.developers.google.com/apis"><u>Google API Console</u></a></p>
   <p>點選左上角<span class="monokai-red">選取專案</span>。跳出新視窗後點選右上角<span class="monokai-red">新增專案</span></p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-new1.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-new1.png"></p>
   <p>點選<span class="monokai-red">&nbsp;<i class="fa fa-plus"></i>啟用API和服務</span></p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-new2.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-new2.png"></p>
   <p>搜尋<span class="monokai-red"> Google Sheets API </span>，並點選啟用</p>
-  <p class="margin-bot"><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-new3.png"></p>
+  <p class="margin-bot"><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-new3.png"></p>
 
   <h4><b>3. 設定 OAuth 與 憑證</b></h4>
   <p>
@@ -36,33 +36,33 @@
     <span class="monokai-red">應用程式名稱</span>與
     <span class="monokai-red">支援電子郵件</span>為必填欄位
   </p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-credit1.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-credit1.png"></p>
   <p>
     點選左方<span class="monokai-darkBlue"><b>憑證</b></span>，
     再點選<span class="monokai-red">&nbsp;<i class="fa fa-plus"></i>建立憑證</span>，
     選擇<span class="monokai-red"> API金鑰</span>
   </p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-credit2.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-credit2.png"></p>
   <p>
     再次<span class="monokai-red">&nbsp;<i class="fa fa-plus"></i>建立憑證</span>，
     選擇<span class="monokai-red"> OAuth用戶端 ID</span>
   </p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-credit3.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-credit3.png"></p>
   <p>
     應用程式類型選擇<span class="monokai-red">網頁應用程式</span>，
     下方 URI 輸入需要用到此 API 的網址， ex. <span class="monokai-red"><b>https://localhost</b></span>
   </p>
-  <p class="margin-bot"><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-credit4.png"></p>
+  <p class="margin-bot"><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-credit4.png"></p>
 
   <h4><b>4. Google 表單開啟共用</b></h4>
   <p>點 google 表單右上角 <span class="monokai-red">共用</span> </p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-share1.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-share1.png"></p>
   <p>
     點下方 <span class="monokai-red">取得連結</span>，將"限制"更改為
     <span class="monokai-red">知道連結的使用者</span>。若要使用寫入功能，再將右邊"檢視者"更改為
     <span class="monokai-red">編輯者</span>
   </p>
-  <p><img class="img-fluid shadow margin-bot" src="../../../assets/img/google-sheet-api/google-sheet-api-share2.png"></p>
+  <p><img class="img-fluid shadow margin-bot" src="assets/img/google-sheet-api/google-sheet-api-share2.png"></p>
 
   <h4><b>5. 網頁端串接</b></h4>
   <p>在 index.html 中，加入下列 code</p>
@@ -75,7 +75,7 @@
   </div>
 
   <p>範例代碼</p>
-  <p><iframe width="100%" height="800" src="//jsfiddle.net/bearAndrew/L53sfogn/2/embedded/js,html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+  <p class="shadow"><iframe width="100%" height="800" src="//jsfiddle.net/bearAndrew/L53sfogn/2/embedded/js,html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
   <h5><b> <i class="fa fa-star"></i> NgZone</b></h5>
   <div class="alert alert-warning">使用第三方套件時，可能會脫離 Angular 偵測範圍，需使用 NgZone 返回 Angular 偵測範圍</div>
   <p>
@@ -94,7 +94,7 @@
       <hr>
       <p>
         在 Google 表單中看讀寫內容
-        <a href="https://docs.google.com/spreadsheets/d/1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM"><u>Google 表單位置</u></a>
+        <a href="https://docs.google.com/spreadsheets/d/1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM" target="_blank"><u>Google 表單位置</u></a>
       </p>
       <p>需登入 google 授權 sheets api 應用程式，才可以使用。</p>
 
