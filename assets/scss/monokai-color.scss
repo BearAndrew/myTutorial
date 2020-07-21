@@ -1,0 +1,65 @@
+// monokai color
+$Background:	#272822;
+$Foreground:	#F8F8F2;
+$Comment:	#75715E;
+$Red:	#F92672;
+$Orange:	#FD971F;
+$LightOrange:	#E69F66;
+$Yellow:	#E6DB74;
+$Green:	#A6E22E;
+$DarkGreen:	#6da800;
+$Blue:	#66D9EF;
+$DarkBlue:	#4da0ff;
+$Purple:	#AE81FF;
+
+code {
+  color: $Foreground;
+}
+
+.monokai-bg {
+  background-color: $Background;
+}
+
+.monokai-fg {
+  color: $Foreground;
+}
+
+.monokai-comment {
+  color: $Comment;
+}
+
+.monokai-red {
+  color: $Red;
+}
+
+.monokai-orange {
+  color: $Orange;
+}
+
+.monokai-lightOrange {
+  color: $LightOrange;
+}
+
+.monokai-yellow {
+  color: $Yellow;
+}
+
+.monokai-green {
+  color: $Green;
+}
+
+.monokai-darkGreen {
+  color: $DarkGreen;
+}
+
+.monokai-blue {
+  color: $Blue;
+}
+
+.monokai-darkBlue {
+  color: $DarkBlue;
+}
+
+.monokai-purple {
+  color: $Purple;
+}
