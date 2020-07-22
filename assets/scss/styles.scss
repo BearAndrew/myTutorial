@@ -20,13 +20,6 @@ $sidebar-width: 260px;
   margin-top: 1.5rem;
 }
 
-.notransition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
-
 pre {
   padding: 1rem;
   margin-bottom: 1rem;
@@ -37,11 +30,25 @@ body {
   // border: medium solid black;
 }
 
+img {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 .tab {
   padding-left: 2rem;
 }
 
-div.default {
+.default {
   padding: 1rem;
   margin-bottom: 1rem;
 }
