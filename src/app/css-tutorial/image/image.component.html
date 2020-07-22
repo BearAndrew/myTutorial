@@ -1,0 +1,107 @@
+<div class="container animated fadeIn">
+  <h1><b>Image</b></h1>
+  <hr>
+
+  <div class="card shadow margin-bot">
+    <div class="card-body">
+      <h4 class="card-title">object-fit</h4>
+      <hr>
+      <ul>
+        <li>
+          fill <br>
+          預設值，預設會強制變形至 css 所定義的元素寬高，不管原檔比例。
+        </li>
+        <li>
+          contain<br>
+          增加或減少載入物件的寬度及高度(維持原比例)直到放得進所定義的元素寬高。
+        </li>
+        <li>
+          cover<br>
+          填滿元素的寬度及高度(維持原比例)，通常會剪掉部分的物件。
+        </li>
+        <li>
+          none<br>
+          不做任何大小及比例調整。
+        </li>
+        <li>
+          scale-down<br>
+          將會選擇設為 none 或 container 兩者間較小的那個物件。
+        </li>
+      </ul>
+
+      <div class="card shadow" [style.width]="setWidth + '%'">
+        <div class="card-body">
+          <h4 class="card-title">範例</h4>
+          <p>
+            img<br>
+            <span class="tab"></span>height: 150px<br>
+            <span class="tab"></span>object-fit: [option]
+          </p>
+          <p>調整寬度</p>
+          <p><input type="range" min="50" max="100" step="1" value="100" [(ngModel)]="setWidth"></p>
+          <div class="row">
+            <div class="col-md-4">
+              <p class="img-title">fill</p>
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(54).jpg" class="object-fit">
+            </div>
+
+            <div class="col-md-4">
+              <p class="img-title">contain</p>
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(54).jpg" class="object-fit object-fit-contain">
+            </div>
+
+            <div class="col-md-4">
+              <p class="img-title">cover</p>
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(54).jpg" class="object-fit object-fit-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow margin-bot">
+    <div class="card-body">
+      <h4 class="card-title">MDBootstrap</h4>
+      <hr>
+      <p>
+        更多效果 參考
+        <a href="https://mdbootstrap.com/docs/jquery/content/images/#!" target="_blank"><u>MDB官網</u></a>
+      </p>
+
+      <div class="row">
+        <!--Zoom effect-->
+        <div class="img-wrap col-md-6">
+          <p class="img-title">zoom</p>
+          <div class="view overlay zoom">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).jpg" class="img-fluid " alt="zoom">
+            <div class="mask flex-center waves-light" mdbWavesEffect>
+              <p class="white-text">Zoom effect</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Mask with wave-->
+        <div class="img-wrap col-md-6">
+          <p class="img-title">overlay</p>
+          <div class="view overlay">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(1).jpg" class="img-fluid" alt="Sample image with waves effect.">
+            <a>
+              <div class="mask flex-center waves-effect waves-light rgba-teal-light" mdbWavesEffect>
+                <p class="white-text">Light overlay</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow margin-bot">
+    <div class="card-body">
+      <h4 class="card-title">Magnifier </h4>
+      <hr>
+      <p><a href="https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp" target="_blank"><u>link</u></a></p>
+    </div>
+  </div>
+</div>

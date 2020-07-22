@@ -41,11 +41,14 @@ $full-height: calc(100vh - 55px);
 .carousel {
   background: black;
   height: $full-height;
+  overflow: hidden;
+
   img {
     display: block;
     height: $full-height;
     width: auto;
     opacity: 0.3;
+    object-fit: cover;
   }
 }
 

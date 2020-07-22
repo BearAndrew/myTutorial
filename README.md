@@ -28,3 +28,4 @@ e2e test
 
 ## Css
 deployment: aws, gcp, azure  
+image: magnifier 

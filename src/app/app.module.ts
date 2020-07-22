@@ -27,6 +27,7 @@ import { CssTutorialComponent } from './css-tutorial/css-tutorial.component';
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
 import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sidebar-tutorial.component';
 import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/carousel-tutorial.component';
+import { ImageComponent } from './css-tutorial/image/image.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/caro
     TestComponent,
     CarouselTutorialComponent,
     ChartComponent,
-    DeploymentComponent
+    DeploymentComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+img {
+  width: 100%;
+}
+
+.img-wrap {
+  overflow: hidden;
+}
+
+.img-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.object-fit {
+  height: 150px;
+
+  &-contain{
+    object-fit: contain;
+  }
+
+  &-cover{
+    object-fit: cover;
+  }
+}

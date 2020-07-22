@@ -436,6 +436,10 @@ $img-shadow-color:rgba(0, 0, 0, 0.5);
 .sidebar {
 
   background-color: $bg-sidebar-wrapper;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
 
   .sidebar-profile,
   .sidebar-search,

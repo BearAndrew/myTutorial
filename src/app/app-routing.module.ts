@@ -15,6 +15,7 @@ import { DeploymentComponent } from './ng-tutorial/deployment/deployment.compone
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
 import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sidebar-tutorial.component';
 import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/carousel-tutorial.component';
+import { ImageComponent } from './css-tutorial/image/image.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
   { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
   { path: 'css-tutorial/carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },
+  { path: 'css-tutorial/image', pathMatch: 'full', component: ImageComponent },
   { path: '**', component: AppComponent },
 ];
 
