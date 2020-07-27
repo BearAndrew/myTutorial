@@ -16,10 +16,12 @@ deployment: iis , github page
 css-frame: mdbootstrap  
 sidbar-tutorial: pro-sidebar  
 carousel: slick  
+image: object-fit mdbootstrap  
 
 ### 待完成  
 
 ## Angular / js
+cryptographic  
 social login  
 google map  
 unit test  
