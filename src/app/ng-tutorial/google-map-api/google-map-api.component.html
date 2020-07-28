@@ -1,0 +1,26 @@
+<div class="container animated fadeIn">
+  <h1><b>Google Map API</b></h1>
+  <hr>
+
+  <p>
+    <a href="https://cloud.google.com/maps-platform/" target="_blank"><u>Google Map Platform</u></a>&nbsp;&nbsp;
+    <a href="https://angular-maps.com/" target="_blank"><u>Angular Google Map (AGM)</u></a>&nbsp;&nbsp;
+    <a href="https://morioh.com/p/2c207decfe30" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;
+    <a href="https://stackoverflow.com/questions/55298488/how-to-set-background-color-of-marker-label-in-agm-angular-7" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
+    <a href="https://stackblitz.com/edit/angular-google-maps-demo?file=app%2Fapp.component.html" target="_blank"><u>Online Example</u></a>&nbsp;&nbsp;
+  </p>
+
+  <h4><b>1. 安裝agm</b></h4>
+  <pre class="bash-bg">npm i @agm/core --save</pre>
+
+  <h4><b>2. 在 app.module.ts 中 import</b></h4>
+  <p class="shadow"><iframe width="100%" height="310" src="//jsfiddle.net/bearAndrew/oqay4rvc/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+
+  <agm-map [fitBounds]="true">
+    <div *ngFor="let marker of markers">
+      <agm-marker  [latitude]="marker.position.lat" [longitude]="marker.position.lng" [label]="marker.label" [iconUrl]="marker.icon" [agmFitBounds]="true">
+        <agm-info-window>info window</agm-info-window>
+      </agm-marker>
+    </div>
+  </agm-map>
+</div>

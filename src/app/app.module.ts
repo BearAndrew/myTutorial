@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
+import { AgmCoreModule } from '@agm/core';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './nav-component/footer/footer.component';
@@ -21,6 +22,7 @@ import { ReactFormComponent } from './ng-tutorial/react-form/react-form.componen
 import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-sheet-api.component';
 import { ChartComponent } from './ng-tutorial/chart/chart.component';
 import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
+import { GoogleMapApiComponent } from './ng-tutorial/google-map-api/google-map-api.component';
 
 // css-tutorial
 import { CssTutorialComponent } from './css-tutorial/css-tutorial.component';
@@ -48,7 +50,8 @@ import { ImageComponent } from './css-tutorial/image/image.component';
     CarouselTutorialComponent,
     ChartComponent,
     DeploymentComponent,
-    ImageComponent
+    ImageComponent,
+    GoogleMapApiComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,10 @@ import { ImageComponent } from './css-tutorial/image/image.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyATbAwwUGFV7NmaClteGDHdd3GXJO6MNEo'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

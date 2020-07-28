@@ -11,6 +11,8 @@ import { ReactFormComponent } from './ng-tutorial/react-form/react-form.componen
 import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-sheet-api.component';
 import { ChartComponent } from './ng-tutorial/chart/chart.component';
 import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
+import { GoogleMapApiComponent } from './ng-tutorial/google-map-api/google-map-api.component';
+
 // css tutorial
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
 import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sidebar-tutorial.component';
@@ -27,6 +29,7 @@ const routes: Routes = [
   { path: 'ng-tutorial/google-sheet-api', pathMatch: 'full', component: GoogleSheetApiComponent },
   { path: 'ng-tutorial/chart', pathMatch: 'full', component: ChartComponent },
   { path: 'ng-tutorial/deployment', pathMatch: 'full', component: DeploymentComponent },
+  { path: 'ng-tutorial/google-map-api', pathMatch: 'full', component: GoogleMapApiComponent },
   { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
   { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
   { path: 'css-tutorial/carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },
