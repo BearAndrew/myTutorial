@@ -6,7 +6,8 @@
     <a href="https://cloud.google.com/maps-platform/" target="_blank"><u>Google Map Platform</u></a>&nbsp;&nbsp;
     <a href="https://angular-maps.com/" target="_blank"><u>Angular Google Map (AGM)</u></a>&nbsp;&nbsp;
     <a href="https://morioh.com/p/2c207decfe30" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;
-    <a href="https://stackoverflow.com/questions/55298488/how-to-set-background-color-of-marker-label-in-agm-angular-7" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
+    <a href="https://dotblogs.com.tw/explooosion/2017/07/17/212602" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
+    <a href="https://stackoverflow.com/questions/55298488/how-to-set-background-color-of-marker-label-in-agm-angular-7" target="_blank"><u>參考資料3</u></a>&nbsp;&nbsp;
     <a href="https://stackblitz.com/edit/angular-google-maps-demo?file=app%2Fapp.component.html" target="_blank"><u>Online Example</u></a>&nbsp;&nbsp;
   </p>
 
@@ -14,13 +15,47 @@
   <pre class="bash-bg">npm i @agm/core --save</pre>
 
   <h4><b>2. 在 app.module.ts 中 import</b></h4>
-  <p class="shadow"><iframe width="100%" height="310" src="//jsfiddle.net/bearAndrew/oqay4rvc/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+  <p class="shadow margin-bot"><iframe width="100%" height="310" src="//jsfiddle.net/bearAndrew/oqay4rvc/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
 
-  <agm-map [fitBounds]="true">
-    <div *ngFor="let marker of markers">
-      <agm-marker  [latitude]="marker.position.lat" [longitude]="marker.position.lng" [label]="marker.label" [iconUrl]="marker.icon" [agmFitBounds]="true">
-        <agm-info-window>info window</agm-info-window>
-      </agm-marker>
+  <div class="alert alert-warning">若編譯時發生錯誤 : Cannot find name 'google'. 做以下動作。</div>
+  <div class="card shadow default">
+    <div class="card-body">
+      <p><a href="https://stackoverflow.com/questions/42394697/angular2-cannot-find-namespace-google" target="_blank"><u>參考資料</u></a></p>
+      <p>1. 安裝 @types/googlemaps</p>
+      <pre class="bash-bg">npm i @types/googlemaps --save-dev</pre>
+      <p>2. 在 <span class="monokai-red">tsconfig.app.json</span> 的 types 中加入</p>
+      <div class="monokai-bg default">
+        <code>
+          "<span class="monokai-blue">type</span>": ["<span class="monokai-orange">googlemaps</span>"]
+        </code>
+      </div>
     </div>
-  </agm-map>
+  </div>
+
+  <div class="card shadow default">
+    <div class="card-body">
+      <h4 class="card-title"><b>範例</b></h4>
+      <hr>
+
+      <p>點擊新增 marker</p>
+      <hr>
+
+      <agm-map [fitBounds]="fitBounds" (mapReady)="onMapReady($event)">
+        <div *ngFor="let marker of markers">
+          <agm-marker [animation]="marker?.animation" [latitude]="marker.position.lat" [longitude]="marker.position.lng" [label]="marker.label" [iconUrl]="marker.icon" [agmFitBounds]="true" [markerDraggable]="marker?.draggable">
+            <agm-info-window>info window {{marker?.animation}}</agm-info-window>
+          </agm-marker>
+        </div>
+      </agm-map>
+    </div>
+  </div>
+
+  <div class="card shadow default">
+    <div class="card-body">
+      <h4 class="card-title"><b></b></h4>
+      <hr>
+      施工中
+    </div>
+  </div>
+
 </div>

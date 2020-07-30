@@ -19,21 +19,30 @@ import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sideba
 import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/carousel-tutorial.component';
 import { ImageComponent } from './css-tutorial/image/image.component';
 
+// other-tutorial
+import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
+import { GitComponent } from './other-tutorial/git/git.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'ng-tutorial', pathMatch: 'full', component: NgTutorialComponent },
-  { path: 'css-tutorial/', pathMatch: 'full', component: CssTutorialComponent },
+  { path: 'css-tutorial', pathMatch: 'full', component: CssTutorialComponent },
+  { path: 'other-tutorial', pathMatch: 'full', component: OtherTutorialComponent },
+  // ng-tutorial
   { path: 'ng-tutorial/validator', pathMatch: 'full', component: ValidatorComponent },
   { path: 'ng-tutorial/react-form', pathMatch: 'full', component: ReactFormComponent },
   { path: 'ng-tutorial/google-sheet-api', pathMatch: 'full', component: GoogleSheetApiComponent },
   { path: 'ng-tutorial/chart', pathMatch: 'full', component: ChartComponent },
   { path: 'ng-tutorial/deployment', pathMatch: 'full', component: DeploymentComponent },
   { path: 'ng-tutorial/google-map-api', pathMatch: 'full', component: GoogleMapApiComponent },
+  // css-tutorial
   { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
   { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
   { path: 'css-tutorial/carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },
   { path: 'css-tutorial/image', pathMatch: 'full', component: ImageComponent },
+  // other-tutorial
+  { path: 'other-tutorial/git', pathMatch: 'full', component: GitComponent },
   { path: '**', component: AppComponent },
 ];
 

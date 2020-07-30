@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { MapsAPILoader, MouseEvent } from '@agm/core';
 
 @Component({
   selector: 'app-google-map-api',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class GoogleMapApiComponent implements OnInit {
 
   markers = [];
+  fitBounds = true;
 
   constructor() { }
 
@@ -44,4 +46,29 @@ export class GoogleMapApiComponent implements OnInit {
     this.markers.push(markerPickup);
   }
 
+  onMapReady(map) {
+    console.log(map);
+
+    map.addListener('center_changed', () => {
+      this.fitBounds = false;
+    });
+
+    this.mapClick(map);
+  }
+
+  mapClick(map) {
+    map.addListener('click', (e) => {
+      // console.log(e);
+      const coords = e.latLng.toString().replace(/\(|\)/g, '').split(/,/);
+      console.log(coords);
+      this.markers.push({
+        position: {
+          lat: coords[0],
+          lng: coords[1]
+        },
+        draggable: true,
+        animation: 'BOUNCE'
+      });
+    });
+  }
 }

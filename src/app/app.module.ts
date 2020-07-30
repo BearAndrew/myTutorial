@@ -31,6 +31,10 @@ import { SidebarTutorialComponent } from './css-tutorial/sidebar-tutorial/sideba
 import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/carousel-tutorial.component';
 import { ImageComponent } from './css-tutorial/image/image.component';
 
+// other-tutorial
+import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
+import { GitComponent } from './other-tutorial/git/git.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +55,9 @@ import { ImageComponent } from './css-tutorial/image/image.component';
     ChartComponent,
     DeploymentComponent,
     ImageComponent,
-    GoogleMapApiComponent
+    GoogleMapApiComponent,
+    OtherTutorialComponent,
+    GitComponent
   ],
   imports: [
     BrowserModule,
