@@ -1,5 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-google-sheet-api',
@@ -12,11 +13,11 @@ export class GoogleSheetApiComponent implements OnInit {
   // gasUrl = 'https://script.google.com/macros/s/AKfycbydI_XHFbfqvB8BSwtsrusKUieDQp01s6U0psnezl3WuxOpDeou/exec';
 
   // Spreadsheet ID
-  SPREADSHEET_ID = '1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM';
+  SPREADSHEET_ID = environment.googleSheetAPI.SPREADSHEET_ID;
 
   // Client ID and API key from the Developer Console
-  CLIENT_ID = '410245416249-ar8a9en8hb9h6lq6flejedfcthr75lkp.apps.googleusercontent.com';
-  API_KEY = 'AIzaSyCE5EVGlfQka7dKI8RYbLbJqOltzUD08KA';
+  CLIENT_ID = environment.googleSheetAPI.CLIENT_ID;
+  API_KEY = environment.googleSheetAPI.API_KEY;
 
   // Array of API discovery doc URLs for APIs used by the quickstart
   DISCOVERY_DOCS = ['https://sheets.googleapis.com/$discovery/rest?version=v4'];

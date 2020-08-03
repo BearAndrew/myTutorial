@@ -21,8 +21,8 @@ export class CarouselTutorialComponent implements OnInit {
         dots: true,
         infinite: true,
         cssEase: 'linear',
-        speed: 1500,
-        fade: true,
+        speed: 500,
+        // fade: true,
       });
     });
   }

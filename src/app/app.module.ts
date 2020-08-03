@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,6 +35,7 @@ import { ImageComponent } from './css-tutorial/image/image.component';
 // other-tutorial
 import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
 import { GitComponent } from './other-tutorial/git/git.component';
+import { RouteComponent } from './ng-tutorial/route/route.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { GitComponent } from './other-tutorial/git/git.component';
     ImageComponent,
     GoogleMapApiComponent,
     OtherTutorialComponent,
-    GitComponent
+    GitComponent,
+    RouteComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,7 @@ import { GitComponent } from './other-tutorial/git/git.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyATbAwwUGFV7NmaClteGDHdd3GXJO6MNEo'
+      apiKey: environment.googleMapAPI.API_KEY
     }),
   ],
   providers: [],

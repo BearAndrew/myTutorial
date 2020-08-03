@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  googleSheetAPI: {
+    SPREADSHEET_ID : '1tkQVwKCbxmiiwhHPdiIOptCC_zg-xj-qhRkz52k5pqM',
+    CLIENT_ID : '410245416249-ar8a9en8hb9h6lq6flejedfcthr75lkp.apps.googleusercontent.com',
+    API_KEY : 'AIzaSyCE5EVGlfQka7dKI8RYbLbJqOltzUD08KA',
+  },
+  googleMapAPI: {
+    API_KEY : 'AIzaSyATbAwwUGFV7NmaClteGDHdd3GXJO6MNEo',
+  }
 };
 
 /*
