@@ -12,6 +12,7 @@ import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-s
 import { ChartComponent } from './ng-tutorial/chart/chart.component';
 import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
 import { GoogleMapApiComponent } from './ng-tutorial/google-map-api/google-map-api.component';
+import { FirebaseComponent } from './ng-tutorial/firebase/firebase.component';
 
 // css tutorial
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'ng-tutorial/chart', pathMatch: 'full', component: ChartComponent },
   { path: 'ng-tutorial/deployment', pathMatch: 'full', component: DeploymentComponent },
   { path: 'ng-tutorial/google-map-api', pathMatch: 'full', component: GoogleMapApiComponent },
+  { path: 'ng-tutorial/firebase', pathMatch: 'full', component: FirebaseComponent },
   // css-tutorial
   { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
   { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },

@@ -1,0 +1,75 @@
+<div class="container animated fadeIn">
+  <h1>Firebase</h1>
+  <hr>
+
+  <p>
+    <a href="https://firebase.google.com/?hl=zh-cn" target="_blank"><u>Firebase 官網</u></a>&nbsp;&nbsp;
+    <a href="https://medium.com/@ronald_chun/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E5%8B%95%E6%89%8B%E5%81%9A-angular-cloud-firestore-firebase-547ca15a75f1" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;
+    <a href="https://blog.kevinyang.net/2018/04/30/angular-firebase/" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
+    <a href="https://ballaediworkshop.blogspot.com/2019/09/angular-firebase-authentication.html" target="_blank"><u>參考資料3</u></a>&nbsp;&nbsp;
+    <a href="https://stackoverflow.com/questions/46590155/firestore-permission-denied-missing-or-insufficient-permissions" target="_blank"><u>參考資料4</u></a>&nbsp;&nbsp;
+  </p>
+
+  <h4>1. 安裝</h4>
+  <pre class="bash-bg margin-bot">npm i firebase @angular/fire --save</pre>
+
+  <h4>2. 到 Firebase 官網創建新專案</h4>
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-img1.png">
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-img2.png">
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-img3.png">
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-img4.png">
+  <p><li>將下方 config 資訊 複製到 environment.ts 中</li></p>
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-img5.png">
+
+  <h4>3. 在 angular 中 import</h4>
+  <p><li>environment 中貼上 config</li></p>
+  <p class="shadow margin-bot"><iframe width="100%" height="300" src="//jsfiddle.net/bearAndrew/081sdp27/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+  <p><li>appModule 中 import</li></p>
+  <p class="shadow margin-bot"><iframe width="100%" height="300" src="//jsfiddle.net/bearAndrew/3gsxjqzn/1/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+
+  <h4>4. 在 Firebabse 官網設定 cloud firestore 資料庫</h4>
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-db-img1.png">
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-db-img2.png">
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-db-img3.png">
+  <p><li>點選上方規則，將 false 改為 true</li></p>
+  <img class="img-fluid shadow margin-bot" src="assets/img/firebase/firebase-db-img4.png">
+
+  <h4>5. 範例程式碼</h4>
+  <p class="shadow margin-bot"><iframe width="100%" height="600" src="//jsfiddle.net/bearAndrew/c8f752w6/1/embedded/js,html,css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></p>
+
+  <div class="card margin-bot shadow">
+    <div class="card-body">
+      <h4 class="card-title">範例</h4>
+      <hr>
+
+      <div class="row margin-bot">
+        <div class="col-md-12">
+          <label for="name">姓名</label>
+          <form class="form-inline" action="/search" accept-charset="UTF-8" method="get">
+            <div class="flex-fill mr-2">
+              <input class="form-control w-100" placeholder="輸入姓名" name="name" [(ngModel)]="name">
+            </div>
+            <button class="btn btn-primary" (click)="addItem(name)">新增</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+
+      <div *ngFor="let item of items | async">
+        <div class="card shadow margin-bot-sm" *ngIf="item.uid">
+          <div class="card-body">
+            <div class="row">
+              <span class="col-sm-4">姓名: {{item.name}}</span>
+              <span class="col-sm-4">uid: {{item.uid}}</span>
+              <span class="col-sm-4">建立時間: {{item.created_at?.toDate()|date:'yyyy/MM/dd hh:mm'}}</span>
+            </div>
+            <button class="rm btn btn-danger" (click)="deleteItem(item.uid)">x</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-danger" (click)="deleteAllItem()">Clear</button>
+
+    </div>
+  </div>
+</div>

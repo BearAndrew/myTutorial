@@ -6,6 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -24,6 +27,7 @@ import { GoogleSheetApiComponent } from './ng-tutorial/google-sheet-api/google-s
 import { ChartComponent } from './ng-tutorial/chart/chart.component';
 import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
 import { GoogleMapApiComponent } from './ng-tutorial/google-map-api/google-map-api.component';
+import { FirebaseComponent } from './ng-tutorial/firebase/firebase.component';
 
 // css-tutorial
 import { CssTutorialComponent } from './css-tutorial/css-tutorial.component';
@@ -60,7 +64,8 @@ import { RouteComponent } from './ng-tutorial/route/route.component';
     GoogleMapApiComponent,
     OtherTutorialComponent,
     GitComponent,
-    RouteComponent
+    RouteComponent,
+    FirebaseComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +78,9 @@ import { RouteComponent } from './ng-tutorial/route/route.component';
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapAPI.API_KEY
     }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
