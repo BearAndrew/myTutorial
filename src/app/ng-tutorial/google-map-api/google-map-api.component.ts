@@ -9,12 +9,48 @@ import { Component, OnInit } from '@angular/core';
 export class GoogleMapApiComponent implements OnInit {
 
   markers = [];
-  fitBounds = true;
+  fitBounds = false;
+  taipei101;
+  president;
+
+  public circle = {
+    lat: 25,
+    lng: 121.5,
+    radius: 100,
+    fillColor: 'rgba(194,60,172,1)'
+  };
+
+  public renderOptions = {
+    suppressMarkers: true,
+  };
+
+  public markerOptions = {
+    origin: {
+        icon: 'https://i.imgur.com/7teZKif.png',
+        label : {
+          color: '#000000',
+          fontSize: '30px',
+          fontWeight: 'bold',
+          text: '台北101',
+        },
+    },
+    destination: {
+        icon: 'https://i.imgur.com/7teZKif.png',
+        label : {
+          color: '#000000',
+          fontSize: '30px',
+          fontWeight: 'bold',
+          text: '總統府',
+        },
+        infoWindow: `
+        <p>總統府</p>`
+    },
+  };
 
   constructor() { }
 
   ngOnInit(): void {
-    const taipei101 = {
+    this.taipei101 = {
       position: {
         lat: 25.033671,
         lng: 121.564427
@@ -30,9 +66,8 @@ export class GoogleMapApiComponent implements OnInit {
         scaledSize: {width: 45, height: 45},
       }
     };
-    this.markers.push(taipei101);
 
-    const markerPickup = {
+    this.president = {
       position: {
         lat: 25.04,
         lng: 121.511944
@@ -43,16 +78,36 @@ export class GoogleMapApiComponent implements OnInit {
         fontWeight: 'bold',
         text: '總統府'
     }};
-    this.markers.push(markerPickup);
   }
 
   onMapReady(map) {
     console.log(map);
 
+    // draw area
+    map.data.loadGeoJson('assets/json/TaipeiCity.json');
+    map.data.setStyle({
+      strokeWeight: 1,
+      strokeOpacity: .5,
+      strokeColor: '#000',
+      fillColor: '#f00',
+      fillOpacity: .15
+    });
+
+    map.data.addListener('mouseover', (event) => {
+      map.data.revertStyle();
+      map.data.overrideStyle(event.feature, {fillColor: '#000'});
+    });
+
+    map.data.addListener('mouseout', (event) => {
+      map.data.revertStyle();
+    });
+
+    // set fitBounds false
     map.addListener('center_changed', () => {
       this.fitBounds = false;
     });
 
+    // click
     this.mapClick(map);
   }
 
@@ -71,4 +126,5 @@ export class GoogleMapApiComponent implements OnInit {
       });
     });
   }
+
 }

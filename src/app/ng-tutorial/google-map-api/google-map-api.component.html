@@ -5,6 +5,9 @@
   <p>
     <a href="https://cloud.google.com/maps-platform/" target="_blank"><u>Google Map Platform</u></a>&nbsp;&nbsp;
     <a href="https://angular-maps.com/" target="_blank"><u>Angular Google Map (AGM)</u></a>&nbsp;&nbsp;
+    <a href="https://robby570.tw/Agm-Direction-Docs/index.html" target="_blank"><u>AGM Direction</u></a>&nbsp;&nbsp;
+    <a href="https://www.oxxostudio.tw/articles/201810/google-maps-19-directions.html" target="_blank"><u>Direction 參考資料</u></a>&nbsp;&nbsp;
+    <a href="https://www.oxxostudio.tw/articles/201803/google-maps-15-geojson-taiwan.html" target="_blank"><u>Area 參考資料</u></a>&nbsp;&nbsp;
     <a href="https://morioh.com/p/2c207decfe30" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;
     <a href="https://dotblogs.com.tw/explooosion/2017/07/17/212602" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;
     <a href="https://stackoverflow.com/questions/55298488/how-to-set-background-color-of-marker-label-in-agm-angular-7" target="_blank"><u>參考資料3</u></a>&nbsp;&nbsp;
@@ -46,6 +49,13 @@
             <agm-info-window>info window {{marker?.animation}}</agm-info-window>
           </agm-marker>
         </div>
+        <agm-direction
+          [origin]="taipei101.position"
+          [destination]="president.position"
+          [renderOptions]="renderOptions"
+          [markerOptions]="markerOptions"
+        >
+        </agm-direction>
       </agm-map>
     </div>
   </div>

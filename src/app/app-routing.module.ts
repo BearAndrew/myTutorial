@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NgTutorialComponent } from './ng-tutorial/ng-tutorial.component';
 import { CssTutorialComponent } from './css-tutorial/css-tutorial.component';
+import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
 // ng tutorial
 import { ValidatorComponent } from './ng-tutorial/validator/validator.component';
 import { ReactFormComponent } from './ng-tutorial/react-form/react-form.component';
@@ -13,6 +14,7 @@ import { ChartComponent } from './ng-tutorial/chart/chart.component';
 import { DeploymentComponent } from './ng-tutorial/deployment/deployment.component';
 import { GoogleMapApiComponent } from './ng-tutorial/google-map-api/google-map-api.component';
 import { FirebaseComponent } from './ng-tutorial/firebase/firebase.component';
+import { PwaComponent } from './ng-tutorial/pwa/pwa.component';
 
 // css tutorial
 import { CssFrameComponent } from './css-tutorial/css-frame/css-frame.component';
@@ -21,34 +23,41 @@ import { CarouselTutorialComponent } from './css-tutorial/carousel-tutorial/caro
 import { ImageComponent } from './css-tutorial/image/image.component';
 
 // other-tutorial
-import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
 import { GitComponent } from './other-tutorial/git/git.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', pathMatch: 'full', component: HomeComponent },
-  { path: 'ng-tutorial', pathMatch: 'full', component: NgTutorialComponent },
-  { path: 'css-tutorial', pathMatch: 'full', component: CssTutorialComponent },
-  { path: 'other-tutorial', pathMatch: 'full', component: OtherTutorialComponent },
   // ng-tutorial
-  { path: 'ng-tutorial/validator', pathMatch: 'full', component: ValidatorComponent },
-  { path: 'ng-tutorial/react-form', pathMatch: 'full', component: ReactFormComponent },
-  { path: 'ng-tutorial/google-sheet-api', pathMatch: 'full', component: GoogleSheetApiComponent },
-  { path: 'ng-tutorial/chart', pathMatch: 'full', component: ChartComponent },
-  { path: 'ng-tutorial/deployment', pathMatch: 'full', component: DeploymentComponent },
-  { path: 'ng-tutorial/google-map-api', pathMatch: 'full', component: GoogleMapApiComponent },
-  { path: 'ng-tutorial/firebase', pathMatch: 'full', component: FirebaseComponent },
+  { path: 'ng-tutorial', children: [
+    { path: '', pathMatch: 'full', component: NgTutorialComponent },
+    { path: 'validator', pathMatch: 'full', component: ValidatorComponent },
+    { path: 'react-form', pathMatch: 'full', component: ReactFormComponent },
+    { path: 'google-sheet-api', pathMatch: 'full', component: GoogleSheetApiComponent },
+    { path: 'chart', pathMatch: 'full', component: ChartComponent },
+    { path: 'deployment', pathMatch: 'full', component: DeploymentComponent },
+    { path: 'google-map-api', pathMatch: 'full', component: GoogleMapApiComponent },
+    { path: 'firebase', pathMatch: 'full', component: FirebaseComponent },
+    { path: 'pwa', pathMatch: 'full', component: PwaComponent },
+  ]},
   // css-tutorial
-  { path: 'css-tutorial/css-frame', pathMatch: 'full', component: CssFrameComponent },
-  { path: 'css-tutorial/sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
-  { path: 'css-tutorial/carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },
-  { path: 'css-tutorial/image', pathMatch: 'full', component: ImageComponent },
+  { path: 'css-tutorial', children: [
+    { path: '', pathMatch: 'full', component: CssTutorialComponent },
+    { path: 'css-frame', pathMatch: 'full', component: CssFrameComponent },
+    { path: 'sidebar-tutorial', pathMatch: 'full', component: SidebarTutorialComponent },
+    { path: 'carousel-tutorial', pathMatch: 'full', component: CarouselTutorialComponent },
+    { path: 'image', pathMatch: 'full', component: ImageComponent },
+  ]},
   // other-tutorial
-  { path: 'other-tutorial/git', pathMatch: 'full', component: GitComponent },
+  { path: 'other-tutorial', children: [
+    { path: '', pathMatch: 'full', component: OtherTutorialComponent },
+    { path: 'git', pathMatch: 'full', component: GitComponent },
+  ]},
   { path: '**', component: AppComponent },
 ];
 
 @NgModule({
+  // scrollPositionRestoration : scroll to top
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })

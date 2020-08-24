@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { AgmDirectionModule } from 'agm-direction';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -40,6 +41,7 @@ import { ImageComponent } from './css-tutorial/image/image.component';
 import { OtherTutorialComponent } from './other-tutorial/other-tutorial.component';
 import { GitComponent } from './other-tutorial/git/git.component';
 import { RouteComponent } from './ng-tutorial/route/route.component';
+import { PwaComponent } from './ng-tutorial/pwa/pwa.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { RouteComponent } from './ng-tutorial/route/route.component';
     OtherTutorialComponent,
     GitComponent,
     RouteComponent,
-    FirebaseComponent
+    FirebaseComponent,
+    PwaComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ import { RouteComponent } from './ng-tutorial/route/route.component';
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapAPI.API_KEY
     }),
+    AgmDirectionModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireDatabaseModule,

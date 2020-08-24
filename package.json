@@ -27,6 +27,7 @@
     "@types/gapi": "0.0.39",
     "@types/gapi.auth2": "0.0.52",
     "@types/gapi.client.sheets": "^4.0.9",
+    "agm-direction": "^0.8.6",
     "angular-bootstrap-md": "^9.0.0",
     "animate.css": "^3.7.2",
     "chart.js": "^2.5.0",
