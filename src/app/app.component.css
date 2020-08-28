@@ -1,19 +1,21 @@
+@media screen and (min-width: 768px) {
+  .not-overlap {
+    padding-left: 260px;
+  }
+}
+
 .page-wrapper {
-  height: 100vh;
+  padding: 0;
 }
 
 .page-wrapper .page-content {
-  display: inline-block;
   width: 100%;
-  padding-top: 20px;
   -webkit-transition: padding-left .3s ease;
   transition: padding-left .3s ease;
 }
 
-@media screen and (min-width: 768px) {
-  .page-wrapper .page-content {
-    padding-left: 300px;
-  }
+.page-wrapper .page-content .router-content {
+  min-height: calc(100vh - 55px - 265px);
 }
 
 .page-wrapper .page-content .overlay {

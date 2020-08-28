@@ -42,6 +42,7 @@ import { OtherTutorialComponent } from './other-tutorial/other-tutorial.componen
 import { GitComponent } from './other-tutorial/git/git.component';
 import { RouteComponent } from './ng-tutorial/route/route.component';
 import { PwaComponent } from './ng-tutorial/pwa/pwa.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { PwaComponent } from './ng-tutorial/pwa/pwa.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]

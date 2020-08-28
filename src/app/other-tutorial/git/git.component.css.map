@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "git.component.scss"
+    ],
+    "names": [],
+    "file": "git.component.css"
+}

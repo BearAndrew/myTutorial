@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAA;EACD,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,GAAG,EAAE,GAAG;EACR,aAAa,EAAE,gBAAgB;EAC/B,SAAS,EAAE,gBAAgB;CAC5B;;AAED,AAAA,cAAc,CAAC;EACb,aAAa,EAAE,KAAK;CACrB",
+    "sources": [
+        "firebase.component.scss"
+    ],
+    "names": [],
+    "file": "firebase.component.css"
+}

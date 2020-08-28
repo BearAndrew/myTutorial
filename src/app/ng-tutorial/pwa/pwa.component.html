@@ -1,4 +1,32 @@
-<p>pwa works!</p>
-<p><a href="https://blog.kevinyang.net/2018/07/19/angular-app-shell/"><u></u></a></p>
-<p><a href="https://blog.kevinyang.net/2019/04/20/ng-push-notification/"><u></u></a></p>
-<p>施工中</p>
+<div class="container animated fadeIn">
+  <h1>PWA</h1>
+  <hr>
+
+  <p>
+    <a href="https://blog.kevinyang.net/2018/07/19/angular-app-shell/" target="_blank"><u>參考資料1</u></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://blog.kevinyang.net/2019/04/20/ng-push-notification/" target="_blank"><u>參考資料2</u></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://stackoverflow.com/questions/49566446/how-can-i-have-iis-properly-serve-webmanifest-files-on-my-web-site" target="_blank"><u>IIS manifest</u></a>
+  </p>
+
+  <h4>1. 新增 Service Worker</h4>
+  <pre class="bash-bg">ng add @angular/pwa</pre>
+
+  <h4>2. 安裝 http-server</h4>
+  <pre class="bash-bg">npm install -g http-server</pre>
+
+  <h4>3. 建置後啟動 http-server</h4>
+  <p><a href="https://www.npmjs.com/package/http-server" target="_blank"><u>http-server Doc</u></a></p>
+  <pre class="bash-bg">ng build --prod<br>http-server -p 8080 -c-1 dist/[project-name]</pre>
+  <pre class="bash-bg">ng build --prod --base-href /[project-name]/<br>http-server -p 8080 -c-1 dist</pre>
+
+  <h4>4. IIS 部屬</h4>
+  <p>點選 MIME 類型，新增副檔類型 <span class="monokai-red">.webmanifest</span></p>
+  <p><img class="img-fluid shadow" src="./assets/img/pwa/pwa-iis-img1.png"></p>
+  <p><img class="img-fluid shadow" src="./assets/img/pwa/pwa-iis-img2.png"></p>
+
+  <h4>ios icon</h4>
+  <pre class="bash-bg">&lt;{{'link rel="apple-touch-icon" sizes="180x180" href="icon.png">'}}</pre>
+
+
+
+</div>

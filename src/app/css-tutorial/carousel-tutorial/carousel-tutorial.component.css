@@ -1,0 +1,12 @@
+.carousel {
+  text-align: center;
+  color: #419be0;
+  background: black;
+}
+
+.carousel img {
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=carousel-tutorial.component.css.map */

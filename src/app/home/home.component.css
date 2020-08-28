@@ -1,1 +1,76 @@
-/* No CSS *//*# sourceMappingURL=home.component.css.map */
+.wrap {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wrap h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.wrap .nav-btn {
+  position: absolute;
+  bottom: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: none;
+  border: 1px solid #5a5a5a;
+  border-radius: 5px;
+  color: #5a5a5a;
+  font-size: 5vh;
+  padding: .5vh 1vh;
+  outline: none;
+}
+
+.wrap .nav-btn:hover {
+  border: 1px solid darkgray !important;
+  color: darkgray !important;
+}
+
+.carousel {
+  background: black;
+  height: calc(100vh - 55px);
+  overflow: hidden;
+}
+
+.carousel img {
+  display: block;
+  height: calc(100vh - 55px);
+  width: auto;
+  opacity: 0.3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.parallax {
+  /* The image used */
+  /* Set a specific height */
+  height: calc(50vh + 55px);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-banner {
+  padding: 5rem 1rem;
+  text-align: justify;
+}
+
+.text-banner h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+/*# sourceMappingURL=home.component.css.map */

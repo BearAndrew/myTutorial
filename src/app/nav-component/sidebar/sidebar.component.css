@@ -317,7 +317,7 @@
 .sidebar .sidebar-footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,6 +475,11 @@
 /*------------------------------default theme---------------------------------*/
 .sidebar {
   background-color: #1d1d1d;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 .sidebar .sidebar-profile,
@@ -546,7 +551,6 @@
 }
 
 .sidebar.sidebar-bg {
-  background-image: url(/assets/img/bg1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

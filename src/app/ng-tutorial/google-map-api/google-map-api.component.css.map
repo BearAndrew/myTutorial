@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "google-map-api.component.scss"
+    ],
+    "names": [],
+    "file": "google-map-api.component.css"
+}
