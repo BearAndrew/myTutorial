@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598596554819,
+  "timestamp": 1598599339278,
   "index": "/myTutorial/index.html",
   "assetGroups": [
     {
@@ -171,7 +171,7 @@
     "/myTutorial/index.html": "86f1de3ff185e69260dcf1e7fde7789e248aac8a",
     "/myTutorial/main-es2015.d49d089d8b309f023525.js": "f6d56955a15fbf8579d523bafd4109c08fd88501",
     "/myTutorial/main-es5.d49d089d8b309f023525.js": "1fd48c27a4e7e60758fc3e477ffee73407e6adb9",
-    "/myTutorial/manifest.webmanifest": "5e7015ad110ca8768e299295245e3c6095da0287",
+    "/myTutorial/manifest.webmanifest": "0d34d7393b801721d02db870ac533e7f3c9c022d",
     "/myTutorial/polyfills-es2015.1f913f16a2d346cc8bdc.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/myTutorial/polyfills-es5.1a3c78b07cd6f16c6e9a.js": "0a14b45481c8e41b507ffe0607f3e8b2b73628f6",
     "/myTutorial/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
