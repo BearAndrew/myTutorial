@@ -69,7 +69,7 @@ h6 {
 }
 
 [class^="container"] {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 pre {
@@ -78,14 +78,27 @@ pre {
 }
 
 body {
-  padding-top: 65px;
+  padding-top: 55px;
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .tab {
   padding-left: 2rem;
 }
 
-div.default {
+.default {
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -94,15 +107,11 @@ div.default {
   margin-bottom: 3rem !important;
 }
 
-.card {
-  margin-bottom: 3rem;
-}
-
 .bash-bg {
   background-color: #F2F3F4;
 }
 
 .page-wrapper.toggled .sidebar {
-  left: -300px;
+  left: -260px;
 }
 /*# sourceMappingURL=styles.css.map */
