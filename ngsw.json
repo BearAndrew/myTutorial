@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598599339278,
+  "timestamp": 1598837207510,
   "index": "/myTutorial/index.html",
   "assetGroups": [
     {
@@ -168,7 +168,7 @@
     "/myTutorial/fa-solid-900.89e02bae13c9131c7468.eot": "e13aaeda706af85d9382d7c39f5a3f79d612cd31",
     "/myTutorial/fa-solid-900.cdfec5cf5e9840889790.woff": "120dab7a8a93da819ab3025da6a9f3d3ccd65cce",
     "/myTutorial/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/myTutorial/index.html": "86f1de3ff185e69260dcf1e7fde7789e248aac8a",
+    "/myTutorial/index.html": "cb340c602009c8f284cb0700557b449df7dd59fe",
     "/myTutorial/main-es2015.d49d089d8b309f023525.js": "f6d56955a15fbf8579d523bafd4109c08fd88501",
     "/myTutorial/main-es5.d49d089d8b309f023525.js": "1fd48c27a4e7e60758fc3e477ffee73407e6adb9",
     "/myTutorial/manifest.webmanifest": "0d34d7393b801721d02db870ac533e7f3c9c022d",
